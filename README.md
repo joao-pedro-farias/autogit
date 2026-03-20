@@ -27,6 +27,9 @@ The script executes Git commands using Python (`subprocess`), replicating a real
 
 1. Clone or download the project
 
+```bash
+git clone https://github.com/joao-pedro-farias/autogit.git
+```
 2. Run the script:
 
 ```bash
