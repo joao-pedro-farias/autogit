@@ -22,7 +22,7 @@ if resposta.lower() == 's':
         print("Sua mensagem de commit:", commit)
         subprocess.run(['git', 'commit', '-m', commit])
     url = input("Cole a URL do repositorio aqui: ")
-    subprocess.run(['git', 'remote', 'add', 'origin', url])
+    subprocess.run(['git', 'remote', 'set-url', 'origin', url])
     branch = input("Deseja subir para outra branch? (Enter = main): ")
     if branch.strip() == "":
         print("Subindo para branch main")
