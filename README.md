@@ -29,8 +29,9 @@ The script executes Git commands using Python (`subprocess`), replicating a real
 
 ```bash
 git clone https://github.com/joao-pedro-farias/autogit.git
+cd autogit
 ```
 2. Run the script:
 
 ```bash
-python3 verpasta.py
+python3 autogit.py
