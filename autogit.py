@@ -24,7 +24,16 @@ if response.lower() == 'y':
         subprocess.run(['git', 'commit', '-m', commit])
 
     url = input("Paste the repository URL here: ")
-    subprocess.run(['git', 'remote', 'set-url', 'origin', url])
+    result = subprocess.run(
+        ['git', 'remote'],
+        capture_output=True,
+        text=True
+    )
+    if 'origin' in result.stdout:
+        subprocess.run(['git', 'remote', 'set-url','origin', url])
+    else:
+        subprocess.run(['git', 'remote', 'add', 'origin', url])
+
 
     branch = input("Enter branch name (press Enter for main): ")
     if branch.strip() == "":
